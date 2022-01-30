@@ -1,0 +1,13 @@
+@mixin button (){ 
+    padding: 1rem 2rem;
+    color: $light-text;
+    left: 2rem;
+    top: 55px;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}

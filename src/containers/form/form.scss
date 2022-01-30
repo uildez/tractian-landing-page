@@ -1,0 +1,74 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.form-style {
+    background-color: $color-text;
+    border-radius: 10px; 
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+}
+.name-tel{
+    display: flex;
+}
+.form-group {
+    margin-bottom: 2rem;
+    
+    input::placeholder{
+        color: $light-text;
+        font-family: Poppins;
+    }
+        
+    textarea::placeholder{
+        color: $light-text;
+        font-family: Poppins;
+    }
+}
+label {
+    font-size: 1rem;
+    color: $mainColor;
+    font-weight: 700;
+    input{
+        margin-top: 0rem;
+    }
+}
+input,
+textarea {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    color: $light-text;
+    background-color: $mainColor;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+button[type="submit"] {
+    background-color: $color-dark;
+    color: $light-text;
+    font-size: 1rem;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .form-style {
+        background-color: $color-text;
+        border-radius: 10px; 
+        width: 90%;
+        padding: 1rem 2rem;
+    }
+    .name-tel{
+        display: contents;
+    }
+}

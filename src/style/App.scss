@@ -1,0 +1,56 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $mainColor;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.gradient_bg {
+    background: none;
+}
+
+.gradient_text {
+    color: $light-text;
+}
+
+.section-padding{
+    padding: 4rem 6rem;
+}
+
+.section-margin{
+    margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 760px){ 
+    .section-padding{
+        padding: 4rem;
+    }
+
+    .section-margin{
+        margin: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px){ 
+    .section-padding{
+        padding: 1rem 3rem;
+    }
+
+    .section-margin{
+        margin: 4rem 2rem;
+    }
+}

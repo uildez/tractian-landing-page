@@ -1,0 +1,169 @@
+@import '../../style/variables.scss';
+@import '../../style/mixins.scss';
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    transition: 0.3s;
+    min-height: 80px;
+
+    &.active{
+        background-color: $mainColor;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    &-links_logo{
+        width: 10rem;
+        margin-right: 2rem;
+    }
+    &-sign{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $light-text;
+        font-weight: 500;
+        font-size: 18px;
+    
+        p {
+            color: black;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+    }
+}
+    
+.navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-links_container{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    color: $light-text;
+}
+
+
+.navbar-links_container p,
+.navbar-sign p, .gpt3__navbar-menu-container {
+    color: $light-text;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.navbar-sign button,
+.navbar-menu-container button {
+    @include button
+}
+
+.navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+
+    &_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        text-align: end;
+        background: $secondary-color;
+        padding: 2rem;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        margin-top: 1rem;
+        min-width: 210px;
+        border-radius: 5px;
+        box-shadow: 0 0 5 (0,0,0,0.2);
+
+        p{
+            margin: 1rem 0;
+            color: $light-text;
+            font-size: 18px;    
+        }
+    } 
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+
+
+.navbar-menu-container-links-sign {
+    display: none;
+} 
+
+@media screen and (max-width: 1050px) {
+    .navbar{
+        position: fixed;
+        width: 100%;
+    }
+    .navbar-links_container {
+        display: none;
+    }
+    .navbar-menu{
+        display: flex;
+    }     
+    .navbar-sign-menu_container-links-sign{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar{
+        padding: 2rem 4rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding: 2rem;
+
+        &-sign{
+            display: none;
+
+            &-menu_container-links-sign{
+                display: block;
+                margin-top: 2rem;
+
+                button{
+                    @include button;
+                    color: $secondary-color;
+                    background-color: $light-text;
+                }
+            }
+        }
+      
+
+        &-menu_container{
+            top: 20px;
+
+            &-links-sign {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+

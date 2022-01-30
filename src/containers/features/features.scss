@@ -1,0 +1,85 @@
+@import '../../style/variables.scss';
+@import '../../style/mixins.scss';
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: $color-text;
+    border-radius: 10px; 
+    width: 90%;
+    margin: 0 auto;
+
+    &-heading {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    
+        text-align: left;
+        margin-right: 5rem;
+
+        button {
+            @include button;
+            margin-top: 2rem;
+            color: $light-text;
+            background-color: $mainColor;
+        }
+
+        h1 {
+            font-size: 34px;
+            line-height: 45px;
+            font-weight: 800;
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+            }
+        }
+        p {
+            color: $mainColor;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 500;        
+            margin-top: 2rem;
+        }
+        
+    }
+}
+
+.section__padding{
+    padding: 3rem 6rem;
+    margin-top: 40px;
+}
+
+.features-container {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 990px) {
+    .features {
+        width: 85%;
+        margin: 0 auto;
+        flex-direction: column;
+        &-heading {
+            margin: 0 0 2rem 0;
+        }
+    }
+    .section__padding{
+        padding: 2rem 2rem;
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .features-heading h1 {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+}
