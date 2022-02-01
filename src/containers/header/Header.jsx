@@ -1,6 +1,26 @@
 import React from 'react';
 import './header.scss';
+import { gsap, Power1 } from "gsap";
 import ai from '../../assets/images/ai.png';
+
+function animate () {
+  (document).mousemove(function(event){
+  
+    (".header-image").each(function(index, element){
+      
+      var xPos = (event.clientX/(window).width())-0.5,
+         yPos = (event.clientY/(window).height())-0.5,
+         box = element;
+    
+    gsap.to(box, 1, {
+      rotationY: xPos * 100, 
+      rotationX: yPos * 100,
+      ease: Power1.easeOut,
+    });
+      
+    })  
+  });
+}
 
 const Header = () => {
   return (

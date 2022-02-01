@@ -10,6 +10,9 @@
 }
 .name-tel{
     display: flex;
+    label:first-child{
+        padding-right: 2em;
+    }
 }
 .form-group {
     margin-bottom: 2rem;

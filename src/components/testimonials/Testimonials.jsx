@@ -5,26 +5,29 @@ import './testimonials.scss';
 
 import leftArrow from "../../assets/images/arrow-left.svg";
 import rightArrow from "../../assets/images/arrow-right.svg";
+import cliente1 from "../../assets/images/cliente.1.jpg";
+import cliente2 from "../../assets/images/cliente.2.jpg";
+import cliente3 from "../../assets/images/cliente.3.jpg";
 
 
 const testimonials = [
     {
       name: "Tiago Junqueira",
       title: "Supervisor de Manutenção Geral - AmstedMaxion",
-      image: "https://images.unsplash.com/photo-1582441814869-a262426017f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      image: `${require("../../assets/images/cliente.1.jpg")}`,
       quote:
         "Antes da Tractian, a falha acontecia sem que nós tivéssemos nenhuma chance de reação. Agora nós conseguimos identificar qualquer anomalia fora do normal e isso nos permite fazer a intervenção antes que a quebra aconteça.",
     },
     {
       name: "Eduarda Buaiz",
       title: "Diretora Geral - Indústria Alimentícia",
-      image: "https://image.freepik.com/fotos-gratis/contente-trabalhadora-de-fabrica-em-pe-com-um-tablet-e-olhando-para-longe_74855-16355.jpg",
+      image: `${require("../../assets/images/cliente.2.jpg")}`,
       quote:
       "O dispositivo traz mais confiabilidade ao processo, agilizando a análise de informações e evitando paradas na produção, o que impacta positivamente a produtividade."},
     {
       name: "Renê Santos",
       title: "Técnico Mecânico - Indústria Cervejeira",
-      image: "https://static.vecteezy.com/ti/fotos-gratis/p1/1131323-trabalhador-na-fabrica-foto.jpg",
+      image: `${require("../../assets/images/cliente.3.jpg")}`,
       quote:
         "Uma criança pode instalar o sensor da Tractian, e a plataforma é tão fácil de usar quanto uma rede social. Todo sistema é muito simples e confiável."
     }
@@ -157,9 +160,7 @@ const testimonials = [
       <div className="testimonial-section">
         <div className="testimonial-container">
           <div onClick={prevSlide} className="arrows left">
-            <span>
-              <img src={leftArrow} alt="left arrow" />
-            </span>
+            <img src={leftArrow} alt="left arrow" />
           </div>
           <div className="inner">
             <div className="t-image">

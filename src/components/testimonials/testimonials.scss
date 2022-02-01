@@ -15,7 +15,8 @@
     .arrows {
       position: absolute;
       display: flex;
-      width: 100px;
+      width: 40px;
+      margin: 4rem;
       align-items: center;
       justify-content: center;
       bottom: 0;
@@ -57,6 +58,7 @@
               height: 340px;
               width: 340px;
               object-fit: cover;
+              object-position: 75% 50%;
             }
           }
         }
@@ -146,90 +148,89 @@
 }
 
 @media screen and (max-width: 550px) {
-  .testimonial-container {
-    width: 500px!important;
-    min-width: 500px!important;
-    height: 600px;
-    position: relative;
-    .arrows {
-      position: absolute;
-      display: flex;
-      width: 100px;
-      align-items: center;
-      justify-content: center;
-      bottom: 0;
-      top: -300px!important;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        box-shadow: 0px 0px 30px rgba(0, 0, 80, 0.05);
-      }
-      &.right {
-        right: 0;
-      }
-    }
-    .inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .testimonial-section {
+    height: 70vh!important;
+    display: flex!important;
+    justify-content: none!important;
+    align-items: none!important;
+  
+    .testimonial-container {
+      width: 100%!important;
+      min-width: 100%!important;
       height: 600px;
-      flex-direction: column!important;
-      .t-image {
-        width: 400px;
-        height: 600px;
+      position: relative;
+      .arrows {
+        position: absolute;
+        margin: 35px;
+        display: flex;
+        width: 40px;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        top: -300px!important;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          box-shadow: 0px 0px 30px rgba(0, 0, 80, 0.05);
+        }
+        &.right {
+          right: 0;
+        }
+      }
+      .inner {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        ul {
+        height: 600px;
+        flex-direction: column!important;
+        .t-image {
+          max-width: 300px!important;
+          height: 600px;
           display: flex;
-          position: absolute;
-          overflow: hidden;
-          height: 340px;
-          width: 340px;
-          box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
-          border-radius: 20px;
-          li {
-            height: 340px;
-            width: 340px;
-            img {
-              height: 340px;
-              width: 340px;
-              object-fit: cover;
-            }
+          justify-content: center;
+          align-items: center;
+
+          ul {
+            display: flex;
+            position: absolute;
+            overflow: hidden;
+            height: 340px!important;
+            width: 240px!important;
+            box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+            border-radius: 20px;
           }
         }
       }
-    }
-    
-    .t-content {
-      width: 380px!important;
-      height: 600px;
-      display: flex;
-      align-items: center;
-      ul {
-        position: absolute;
-        overflow: hidden;
+      
+      .t-content {
         width: 380px!important;
-        height: 380px!important;
-        display: flex!important;
-        flex-direction: column!important;
-        align-items: center!important;
-        li {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        ul {
+          position: absolute;
+          overflow: hidden;
           width: 380px!important;
           height: 380px!important;
-          justify-content: center!important;  
-          .content-inner {
-            width: 340px!important;
-            .quote {
-              font-size: 14px!important;
-              letter-spacing: 1px!important;
-              text-align: justify!important;
-            }
-            .name {
-              font-size: 12px!important;
-              letter-spacing: 1px!important;
+          display: flex!important;
+          flex-direction: column!important;
+          align-items: center!important;
+          li {
+            width: 380px!important;
+            height: 380px!important;
+            justify-content: center!important;  
+            .content-inner {
+              width: 340px!important;
+              .quote {
+                font-size: 14px!important;
+                letter-spacing: 1px!important;
+                text-align: justify!important;
+              }
+              .name {
+                font-size: 12px!important;
+                letter-spacing: 1px!important;
+              }
             }
           }
         }

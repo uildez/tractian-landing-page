@@ -38,12 +38,8 @@
     height: 7rem;
 }
 
-.slick-prev:before {
-    display: none;
-}
-
-.slick-next:before{
-    display: none;
+.slick-arrow{
+    display: none!important;
 }
 
 @media screen and (max-width: 750px){
