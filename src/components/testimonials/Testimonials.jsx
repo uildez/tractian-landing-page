@@ -5,9 +5,6 @@ import './testimonials.scss';
 
 import leftArrow from "../../assets/images/arrow-left.svg";
 import rightArrow from "../../assets/images/arrow-right.svg";
-import cliente1 from "../../assets/images/cliente.1.jpg";
-import cliente2 from "../../assets/images/cliente.2.jpg";
-import cliente3 from "../../assets/images/cliente.3.jpg";
 
 
 const testimonials = [
@@ -157,7 +154,7 @@ const testimonials = [
     };
   
     return (
-      <div className="testimonial-section">
+      <div className="testimonial-section" id="depoiments">
         <div className="testimonial-container">
           <div onClick={prevSlide} className="arrows left">
             <img src={leftArrow} alt="left arrow" />

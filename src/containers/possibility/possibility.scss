@@ -10,10 +10,17 @@
         justify-content: flex-start;
         align-items: center;
         margin-right: 2rem;
+        position: relative;
+
+        .mobile{
+            margin: 8rem 10rem;
+        }
 
         img {
-            width: 60%;
-            margin-left: 5rem;
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
         }
     }
     &-content {
@@ -53,10 +60,21 @@
         flex-direction: column;
 
         &-image {
-            margin: 1rem 0;
+            margin: 15rem 0;
+            justify-content: center;
+            
+            .mobile{
+                margin: 0rem;
+                right: 10rem;
+            }
+            
+            .motor{
+                margin: 0rem;
+                left: 10rem;
+            }
 
             img {
-                width: unset;
+                width: 35%;
                 height: unset;
                 margin-left: 0rem;
             }
@@ -67,10 +85,23 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-    .possibility-image img {
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
+@media screen and (max-width: 550px) {
+    .possibility {
+        
+        &-image {
+            margin: 9rem 0;
+            
+            .mobile{
+                right: 2rem;
+            }
+            
+            .motor{
+                left: 3rem;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
     }
 }

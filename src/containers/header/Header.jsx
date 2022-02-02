@@ -1,25 +1,17 @@
 import React from 'react';
 import './header.scss';
-import { gsap, Power1 } from "gsap";
 import ai from '../../assets/images/ai.png';
 
-function animate () {
-  (document).mousemove(function(event){
-  
-    (".header-image").each(function(index, element){
-      
-      var xPos = (event.clientX/(window).width())-0.5,
-         yPos = (event.clientY/(window).height())-0.5,
-         box = element;
-    
-    gsap.to(box, 1, {
-      rotationY: xPos * 100, 
-      rotationX: yPos * 100,
-      ease: Power1.easeOut,
-    });
-      
-    })  
-  });
+
+document.addEventListener("mousemove", parallax);
+function parallax (e) {
+  document.querySelectorAll(".object").forEach(function(move){
+    var moving_value = move.getAttribute("data-value");
+    var x = (e.clientX * moving_value) / 150;
+    var y = (e.clientY * moving_value) / 150;
+
+    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)"; 
+  })
 }
 
 const Header = () => {
@@ -34,7 +26,7 @@ const Header = () => {
         </div>
       </div>
       <div className='header-image'>
-        <img src={ai} alt=""/>
+        <img className="object" data-value="-2" src={ai} alt=""/>
       </div>
     </div>
   )
