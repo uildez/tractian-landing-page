@@ -8,7 +8,7 @@ Landing page responsive to present for the costumer a solucion on Industry Manuf
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
 In the project directory, you can run:<br>
 ``` npm start ```<br>
-<br>
+
 ### Install GSAP with NPM <br>
 ``` npm install gsap ```
 <br>
